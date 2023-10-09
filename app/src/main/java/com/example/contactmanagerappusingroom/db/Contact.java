@@ -26,8 +26,7 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(int id, String name, String emailID) {
-        this.id = id;
+    public Contact(String name, String emailID) {
         this.name = name;
         this.emailID = emailID;
     }
