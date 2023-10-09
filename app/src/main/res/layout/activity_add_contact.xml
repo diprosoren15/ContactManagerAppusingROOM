@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="contact"
+            type="com.example.contactmanagerappusingroom.db.Contact" />
+        
+        <variable
+            name="clickhandler"
+            type="com.example.contactmanagerappusingroom.AddNewContactClickHandler" />
+        
+    </data>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Contact"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/addNameET"
+            android:text="@={contact.name}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Enter contact name" />
+
+        <EditText
+            android:id="@+id/addEmailET"
+            android:text="@={contact.emailID}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Enter contact email" />
+
+        <Button
+            android:id="@+id/addContactBtn"
+            android:onClick="@{clickhandler::onAddContactButtonClicked}"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Add Contact"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"/>
+
+
+    </LinearLayout>
+</layout>

@@ -1,4 +1,4 @@
-package com.example.contactmanagerappusingroom.db.Entity;
+package com.example.contactmanagerappusingroom.db;
 
 
 import androidx.room.ColumnInfo;
